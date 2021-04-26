@@ -40,7 +40,7 @@ html, body {
 }
 
 .left-col {
-    right: 50%;
+    left: 0%;
     background: #d45b48;
 }
 
@@ -120,7 +120,7 @@ html, body {
     transform: translate(-50%, -50%);
     width: 45%;
     height: 50%;
-    background: url(album-art.jpg) no-repeat 50% 50%;
+    background: url(/images/bernt.png) no-repeat 50% 50%;
     background-size: cover;
     opacity: 0;
     animation: appear-text 0.0001s linear forwards;
@@ -316,7 +316,7 @@ html, body {
     position: relative;
     text-transform: uppercase;
     background: whitesmoke;
-    color: yellow;
+    color: rgb(2, 2, 2);
     font-weight: 500;
     letter-spacing: 2px;
     text-decoration: none;
@@ -330,8 +330,8 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
-    width: 100%;
-    height: 100%;
+    width: 200%;
+    height: 200%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -344,24 +344,43 @@ html, body {
     opacity: 1;
 }
 
-.trailer video {
+.trailer iframe {
     position: relative;
-    max-width: 900px;
     outline: none;
 }
 
 .close {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    margin: 0px 0px -240px 500px;
     cursor: pointer;
     filter: invert(1);
-    max-width: 32px;
+    max-width: 22px;
+    z-index: 200;
 }
 
 @media (max-width: 991px) {
 
-    .trailer video {
-        max-width: 90%;
+    iframe {
+        max-width: 80%;
+        max-height: 89%;
     }
+
+    .close {
+        position: absolute;
+        margin: 0px 0px -270px 430px;
+        cursor: pointer;
+        filter: invert(1);
+        max-width: 22px;
+        z-index: 200;
+    }
+}
+
+/* Popout video player */
+
+iframe {
+    left: 90px;
+    top: 200px;
+    width: 100%;
+    height: 111%;
+    border-radius: 15px;
 }
