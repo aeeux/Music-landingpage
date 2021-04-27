@@ -97,9 +97,11 @@ html, body {
 .logo {
     font-family: 'Work Sans', sans-serif;
     font-size: 30px;
+    letter-spacing: 5px;
     color: var(--white);
     position: fixed;
     margin: 1.4em;
+    margin-left: 2rem;
     font-weight: 600;
     z-index: 1;
 }
@@ -179,7 +181,7 @@ html, body {
 }
 
 .about h1 {
-    font-weight: bolder;
+    font-size: 30px;
     color: var(--white);
     font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
@@ -224,7 +226,7 @@ html, body {
 .media ul li a ion-icon{
     color: var(--white);
     cursor: pointer;
-    font-size: 20px;
+    font-size: 30px;
     transition: all 800ms ease-in-out;
 }
 
@@ -252,7 +254,7 @@ html, body {
 }
 
 .data2 h1 {
-    font-weight: bolder;
+    font-size: 30px;
     color: var(--white);
     font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
