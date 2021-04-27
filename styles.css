@@ -54,7 +54,7 @@ html, body {
     height: 50vh;
     background: #4f4538;
     opacity: 0;
-    animation: appear-text 0.0001s linear forwards;
+    animation: appear-text 0.8001s linear forwards;
     animation-delay: 3s;
 }
 
