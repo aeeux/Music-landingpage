@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Variables */
 
 :root {
     /* Colors */
-    --main: #303030;
+    --main: #726A6A;
+    --secondary: #989090;
     --white: whitesmoke;
     /* Font-size */
     --font-large: 10rem;
@@ -29,7 +30,7 @@ html, body {
     padding: 0;
     width: 0%;
     height: 100vh;
-    font-family: 'montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     background: whitesmoke;
 }
 
@@ -41,7 +42,7 @@ html, body {
 
 .left-col {
     left: 0%;
-    background: #d45b48;
+    background: var(--main);
 }
 
 .right-col {
@@ -52,7 +53,7 @@ html, body {
     position: absolute;
     width: 100%;
     height: 50vh;
-    background: #4f4538;
+    background: var(--main);
     opacity: 0;
     animation: appear-text 0.8001s linear forwards;
     animation-delay: 3s;
@@ -63,9 +64,19 @@ html, body {
     top: 50%;
     height: 50vh;
     width: 100%;
-    background: url('/images/guitar.png') no-repeat 50% 50%;
-    background-size: cover;
-    background-color: #000;
+    opacity: 0;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 4.2s;
+    background-color: var(--main);
+}
+
+.bottom img {
+    filter: blur(3px);
+    position: absolute;
+    top: 0%;
+    height: 45vh;
+    width: 40%;
+    margin: 0 30vh;
     opacity: 0;
     animation: appear-text 0.0001s linear forwards;
     animation-delay: 4.2s;
@@ -84,18 +95,19 @@ html, body {
 }
 
 .logo {
-    font-family: Poppins;
-    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 30px;
+    color: var(--white);
     position: fixed;
     margin: 1.4em;
-    font-weight: bolder;
+    font-weight: 600;
     z-index: 1;
 }
 
 .year {
     position: absolute;
-    color: #000;
-    font-family: Poppins;
+    color: var(--white);
+    font-family: 'Work Sans', sans-serif;
     bottom: 8%;
     font-weight: bolder;
     transform: rotate(-90deg);
@@ -103,14 +115,15 @@ html, body {
 }
 
 .buy {
-    color: #f4c8ad;
+    position: fixed;
+    color: var(--white);
     text-transform: uppercase;
-    font-family: Poppins;
+    font-family: 'Work Sans', sans-serif;
     text-decoration: underline;
     position: absolute;
     right: 0%;
     top: -2.6%;
-    margin: 1.4em;
+    margin: 2.4em;
 }
 
 .cover {
@@ -132,8 +145,8 @@ html, body {
     top: 36%;
     left: 33%;
     transform: translate(-50%, -50%);
-    color: #cdbba5;
-    font-family: Poppins;
+    color: var(--white);
+    font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
@@ -151,10 +164,10 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: var(--white);
     opacity: 0.6;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--white);
     padding: 2em;
 }
 
@@ -167,14 +180,14 @@ html, body {
 
 .about h1 {
     font-weight: bolder;
-    color: #6f6457;
-    font-family: Poppins;
+    color: var(--white);
+    font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
 }
 
 .about p {
-    color: #bcac98;
-    font-family: Poppins;
+    color: var(--white);
+    font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 10px;
@@ -187,10 +200,11 @@ html, body {
 
 .media {
     margin-top: 40px;
+    cursor: pointer;
 }
 
 .media p {
-    color: #6f6457;
+    color: var(--white);
     margin-bottom: 0;
 }
 
@@ -202,8 +216,23 @@ html, body {
 
 .media ul li {
     display: inline-block;
-    color: #bcac98;
+    color: var(--white);
     padding-right: 10px;
+    margin-left: 40px;
+}
+
+.media ul li a ion-icon{
+    color: var(--white);
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 800ms ease-in-out;
+}
+
+.media ul li a ion-icon:hover {
+    -ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+    transition: all 800ms ease-in-out;
 }
 
 .next {
@@ -215,11 +244,26 @@ html, body {
 .data2 {
     position: absolute;
     top: 12%;
-    left: 28%;
-    color: #cdbba5;
-    font-family: Poppins;
+    left: 8%;
+    color: var(--white);
+    font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
+}
+
+.data2 h1 {
+    font-weight: bolder;
+    color: var(--white);
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.data2 p {
+    color: var(--white);
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 4px;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .more {
@@ -227,9 +271,9 @@ html, body {
     top: 80%;
     left: 10%;
     font-size: 15px;
-    color: #f4c8ad;
+    color: var(--white);
     text-transform: uppercase;
-    font-family: Poppins;
+    font-family: 'Work Sans', sans-serif;
     text-decoration: underline;
 }
 
@@ -240,7 +284,7 @@ html, body {
    position: absolute;
    width: 0%;
    height: 100%;
-   background: #4f4538;
+   background: #616161;
    animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
    animation-delay: 2s;
 }
@@ -273,12 +317,6 @@ html, body {
 
 }
 
-.upper-block {
-    position: absolute;
-    width: 100%;
-    height: 50vh;
-}
-
 .upper-block::after {
    content: '';
    top: 0;
@@ -286,7 +324,7 @@ html, body {
    position: absolute;
    width: 0%;
    height: 100%;
-   background: #9a8b78;
+   background: #524a4a;
    animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
    animation-delay: 2.4s;
 }
@@ -300,12 +338,12 @@ html, body {
 
 .block-bottom::after {
    content: '';
-   top: 0;
+   top: 0%;
    left: 0;
    position: absolute;
    width: 0%;
    height: 100%;
-   background: #000;
+   background: #363434;
    animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
    animation-delay: 3.6s;
 }
@@ -316,12 +354,13 @@ html, body {
     position: relative;
     text-transform: uppercase;
     background: whitesmoke;
-    color: rgb(2, 2, 2);
+    color: var(--main);
     font-weight: 500;
     letter-spacing: 2px;
     text-decoration: none;
     display: inline-block;
     padding: 10px 15px;
+    border-radius: 2px;
 }
 
 .trailer {
@@ -372,6 +411,25 @@ html, body {
         filter: invert(1);
         max-width: 22px;
         z-index: 200;
+    }
+
+    .bottom img {
+        width: 80%;
+        margin: 0 5vh;
+    }
+
+    .media ul li {
+        display: inline-block;
+        color: var(--white);
+        padding-right: 10px;
+        margin-left: 10px;
+    }
+
+    .about {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
     }
 }
 
